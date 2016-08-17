@@ -1,0 +1,24 @@
+﻿<Window x:Class="WpfApplication1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="257.667" Width="458">
+    <Grid Margin="0,0,23,21">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="113*"/>
+            <RowDefinition Height="119*"/>
+            <RowDefinition Height="0*"/>
+        </Grid.RowDefinitions>
+        <Button x:Name="bubbleSort" Content="Bubble Sort" HorizontalAlignment="Left" Margin="222,19,0,0" VerticalAlignment="Top" Width="92" Click="bubbleSort_Click" Height="34"/>
+        <Label Content="Please enter numbers to be sorted:&#xD;&#xA;" HorizontalAlignment="Left" Margin="8,10,0,0" VerticalAlignment="Top" Height="42" Width="195"/>
+        <TextBox x:Name="numbersToSort" HorizontalAlignment="Left" Height="20" Margin="34,43,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="75" TextChanged="numbersToSort_TextChanged"/>
+        <Button x:Name="addToArray" Content="Add number" HorizontalAlignment="Left" Margin="116,42,0,0" VerticalAlignment="Top" Width="75" Click="addToArray_Click" Height="20"/>
+        <Button x:Name="insertionSort" Content="Insertion Sort" HorizontalAlignment="Left" Margin="318,19,0,0" VerticalAlignment="Top" Width="92" Click="insertionSort_Click" Height="34"/>
+        <TextBox x:Name="sortOutput" HorizontalAlignment="Left" Margin="24,7,0,4" TextWrapping="Wrap" Text="The sort will output here&#xD;&#xA;" Width="388" TextChanged="sortOutput_TextChanged" Grid.Row="1"/>
+        <Popup Name="myPopup" Grid.RowSpan="2"/>
+        <Button x:Name="quickSort" Content="Quick Sort" HorizontalAlignment="Left" Margin="222,57,0,0" VerticalAlignment="Top" Width="92" Click="quickSort_Click" Height="34"/>
+        <Button x:Name="mergeSort" Content="Merge Sort" HorizontalAlignment="Left" Height="34" Margin="318,57,0,0" VerticalAlignment="Top" Width="92" Click="mergeSort_Click_1"/>
+        <Button x:Name="autoAdd" Content="Auto add numbers" HorizontalAlignment="Left" Margin="61,69,0,0" VerticalAlignment="Top" Width="105" Height="26" Click="autoAdd_Click"/>
+
+
+    </Grid>
+</Window>
