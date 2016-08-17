@@ -22,6 +22,7 @@ namespace WpfApplication1
         int[] numbersArray = new int[10];
         string a, b;
         int x, z;
+        
 
         public MainWindow()
         {
@@ -75,17 +76,13 @@ namespace WpfApplication1
 
             }
 
-            string a = Convert.ToString(numbersArray[0]);
-            string b = Convert.ToString(numbersArray[1]);
-            string c = Convert.ToString(numbersArray[2]);
-            string d = Convert.ToString(numbersArray[3]);
-            string l = Convert.ToString(numbersArray[4]);
-            string f = Convert.ToString(numbersArray[5]);
-            string g = Convert.ToString(numbersArray[6]);
-            string h = Convert.ToString(numbersArray[7]);
-            string k = Convert.ToString(numbersArray[8]);
-            string j = Convert.ToString(numbersArray[9]);
-            sortOutput.Text = a + " " + b + " " + c + " " + d + " " + l + " " + f + " " + g + " " + h + " " + k + " " + j;
+            System.Text.StringBuilder text = new System.Text.StringBuilder();
+            for (int b = 0; b < 9; b++)
+            {
+                string a = Convert.ToString(numbersArray[b]);
+                text.Append(a.ToString() + " ");
+            }
+            sortOutput.Text = text.ToString();
             z = 0;
 
         }
@@ -114,26 +111,14 @@ namespace WpfApplication1
             }
 
             System.Text.StringBuilder text = new System.Text.StringBuilder();
-            for (int b = 0; b > 9; b++)
+            for (int b = 0; b < 9; b++)
             {
                 string a = Convert.ToString(numbersArray[b]);
-                text.AppendLine(a.ToString());
+                text.Append(a.ToString() + " ");
             }
             sortOutput.Text = text.ToString();
-            /*
-            string a = Convert.ToString(numbersArray[0]);
-            string b = Convert.ToString(numbersArray[1]);
-            string c = Convert.ToString(numbersArray[2]);
-            string d = Convert.ToString(numbersArray[3]);
-            string l = Convert.ToString(numbersArray[4]);
-            string f = Convert.ToString(numbersArray[5]);
-            string g = Convert.ToString(numbersArray[6]);
-            string h = Convert.ToString(numbersArray[7]);
-            string k = Convert.ToString(numbersArray[8]);
-            string j = Convert.ToString(numbersArray[9]);
-            sortOutput.Text = a + " " + b + " " + c + " " + d + " " + l + " " + f + " " + g + " " + h + " " + k + " " + j;
             z = 0;
-            */
+
         }
 
         private void quickSort_Click(object sender, RoutedEventArgs e) //divide & conquer algorithm
@@ -156,26 +141,21 @@ namespace WpfApplication1
                 }
             }
 
+            quickSortMethod(numbersArray, left, right);
 
-            quickSortRecursion(numbersArray, left, right);
-
-
-            string a = Convert.ToString(numbersArray[0]);
-            string b = Convert.ToString(numbersArray[1]);
-            string c = Convert.ToString(numbersArray[2]);
-            string d = Convert.ToString(numbersArray[3]);
-            string l = Convert.ToString(numbersArray[4]);
-            string f = Convert.ToString(numbersArray[5]);
-            string g = Convert.ToString(numbersArray[6]);
-            string h = Convert.ToString(numbersArray[7]);
-            string k = Convert.ToString(numbersArray[8]);
-            string j = Convert.ToString(numbersArray[9]);
-            sortOutput.Text = a + " " + b + " " + c + " " + d + " " + l + " " + f + " " + g + " " + h + " " + k + " " + j;
+            System.Text.StringBuilder text = new System.Text.StringBuilder();
+            for (int b = 0; b < 9; b++)
+            {
+                string a = Convert.ToString(numbersArray[b]);
+                text.Append(a.ToString() + " ");
+            }
+            sortOutput.Text = text.ToString();
             z = 0;
+
         }
 
 
-        static public void quickSortRecursion(int[] numbers, int left, int right)
+        static public void quickSortMethod(int[] numbers, int left, int right)
         {
 
             int i = left;
@@ -207,9 +187,9 @@ namespace WpfApplication1
 
             //this part is the part that sorts
             if (left < j)
-                quickSortRecursion(numbers, left, j);
+                quickSortMethod(numbers, left, j);
             if (i < right)
-                quickSortRecursion(numbers, i, right);
+                quickSortMethod(numbers, i, right);
         }
 
 
@@ -221,18 +201,14 @@ namespace WpfApplication1
             int right = numbersArray.Length - 1;
 
             mergeSortRecursion(numbersArray, left, right);
-            
-            string a = Convert.ToString(numbersArray[0]);
-            string b = Convert.ToString(numbersArray[1]);
-            string c = Convert.ToString(numbersArray[2]);
-            string d = Convert.ToString(numbersArray[3]);
-            string l = Convert.ToString(numbersArray[4]);
-            string f = Convert.ToString(numbersArray[5]);
-            string g = Convert.ToString(numbersArray[6]);
-            string h = Convert.ToString(numbersArray[7]);
-            string k = Convert.ToString(numbersArray[8]);
-            string j = Convert.ToString(numbersArray[9]);
-            sortOutput.Text = a + " " + b + " " + c + " " + d + " " + l + " " + f + " " + g + " " + h + " " + k + " " + j;
+
+            System.Text.StringBuilder text = new System.Text.StringBuilder();
+            for (int b = 0; b < 9; b++)
+            {
+                string a = Convert.ToString(numbersArray[b]);
+                text.Append(a.ToString() + " ");
+            }
+            sortOutput.Text = text.ToString();
             z = 0;
         }
 
@@ -317,18 +293,14 @@ namespace WpfApplication1
                 numbersArray[i] = randomNum;
             }
 
-            string a = Convert.ToString(numbersArray[0]);
-            string b = Convert.ToString(numbersArray[1]);
-            string c = Convert.ToString(numbersArray[2]);
-            string d = Convert.ToString(numbersArray[3]);
-            string l = Convert.ToString(numbersArray[4]);
-            string f = Convert.ToString(numbersArray[5]);
-            string g = Convert.ToString(numbersArray[6]);
-            string h = Convert.ToString(numbersArray[7]);
-            string k = Convert.ToString(numbersArray[8]);
-            string j = Convert.ToString(numbersArray[9]);
-            sortOutput.Text = a + " " + b + " " + c + " " + d + " " + l + " " + f + " " + g + " " + h + " " + k + " " + j;
-            
+            System.Text.StringBuilder text = new System.Text.StringBuilder();
+            for (int b = 0; b < 9; b++)
+            {
+                string a = Convert.ToString(numbersArray[b]);
+                text.Append(a.ToString() + " ");
+            }
+            sortOutput.Text = text.ToString();
+            z = 0;
         }
 
         private void numbersToSort_TextChanged(object sender, TextChangedEventArgs e)
